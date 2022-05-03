@@ -6,6 +6,7 @@ const app = express();
 const port = 3003;
 // add middle ware
 const middleware = require("./middleware");
+const path = require("path");
 
 
 const server = app.listen(port, () => console.log("Server linstening on port: " + port));
@@ -13,6 +14,11 @@ const server = app.listen(port, () => console.log("Server linstening on port: " 
 // Useing Template Engine "pug"
 app.set("view engine", "pug");
 app.set("views", "views");
+app.use(express.static(path.join(__dirname, "public")));
+
+// ROutes
+const loginRoute = require("./routes/loginRoutes");
+app.use("/login", loginRoute);
 
 // To send get request
 app.get("/", middleware.requireLogin, (req, res, next) => { 
