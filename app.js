@@ -18,7 +18,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // ROutes
 const loginRoute = require("./routes/loginRoutes");
+const registerRoute = require("./routes/registerRoutes");
 app.use("/login", loginRoute);
+app.use("/register", registerRoute);
 
 // To send get request
 app.get("/", middleware.requireLogin, (req, res, next) => { 

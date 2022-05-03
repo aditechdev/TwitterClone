@@ -15,7 +15,7 @@ router.get("/", (req, res, next) => {
     // var payload = {
     //     pageTitle: "Home"
     // }
-    res.status(200).render("login");
+    res.status(200).render("register");
 })
 
 module.exports = router;
