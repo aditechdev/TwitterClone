@@ -17,15 +17,19 @@ block content
         var passwordConfirmField = document.getElementById("passwordConf")
         var form = document.getElementById("registerForm")
         
-        
         function validateForm(){
-            console.log("I am ahere")
-            if(passwordField != passwordConfirmField){
+            console.log("-----1-------");
+            console.log(passwordField.value);
+            console.log("-----2-------");
+            console.log(passwordConfirmField.value);
+           
+            if(passwordField.value != passwordConfirmField.value){
+
                
                 alert("Password do not match. Please try again")
             }else{
                  
-                form.submit()
+                form.submit();
             }
         }
 
