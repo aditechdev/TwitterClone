@@ -13,5 +13,9 @@ app.set("views", "views");
 
 // To send get request
 app.get("/", (req, res, next) => { 
-    res.status(200).render("home");
+    // added payLoad
+    var payload = {
+        pageTitle: "Home"
+    }
+    res.status(200).render("home", payload);
 })
