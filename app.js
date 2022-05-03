@@ -7,6 +7,7 @@ const app = express();
 const port = 3003;
 const server = app.listen(port, () => console.log("Server linstening on port: " + port));
 
+// Useing Template Engine "pug"
 app.set("view engine", "pug");
 app.set("views", "views");
 
