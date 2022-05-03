@@ -1,0 +1,12 @@
+{
+  "name": "twitterclone",
+  "version": "1.0.0",
+  "description": "A practice project to improve my skills",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Aditya Anand",
+  "license": "ISC"
+}
