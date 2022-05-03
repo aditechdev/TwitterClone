@@ -7,7 +7,10 @@ const app = express();
 const port = 3003;
 const server = app.listen(port, () => console.log("Server linstening on port: " + port));
 
+app.set("view engine", "pug");
+app.set("views", "views");
+
 // To send get request
 app.get("/", (req, res, next) => { 
-    res.status(200).send("Yahooo!");
+    res.status(200).render("home");
 })
